@@ -57,6 +57,13 @@ public class UserController {
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
+
+		if (!meetsTheRequirements(createUserRequest.getPassword()) ||
+		!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
+			log.error("createUser | error creating user | password requirement not met.");
+			return ResponseEntity.badRequest().build();
+		}
+
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
 		Cart cart = new Cart();
 		cartRepository.save(cart);
@@ -67,5 +74,8 @@ public class UserController {
 
 		return ResponseEntity.ok(user);
 	}
-	
+
+	private boolean meetsTheRequirements(String password) {
+		return password != null && password.length() > 7;
+	}
 }
