@@ -49,7 +49,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         .withSubject(((org.springframework.security.core.userdetails.User) authResult.getPrincipal()).getUsername())
         .withExpiresAt(new Date(System.currentTimeMillis() + SecurityConstants.EXPIRATION_TIME))
         .sign(HMAC512(SecurityConstants.SECRET.getBytes()));
-
+    System.out.println("JWT: " + token);
     response.addHeader(SecurityConstants.HEADER_STRING, SecurityConstants.TOKEN_PREFIX + token);
   }
 }
