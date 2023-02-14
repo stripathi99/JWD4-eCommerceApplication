@@ -38,7 +38,7 @@ public class UserController {
 		Optional<User> user = userRepository.findById(id);
 
 		if (!user.isPresent()) {
-			log.info("findById(" + id  + ") | user not found");
+			log.warn("findById(" + id  + ") | user not found");
 			return ResponseEntity.notFound().build();
 		}
 
@@ -62,6 +62,9 @@ public class UserController {
 		cartRepository.save(cart);
 		user.setCart(cart);
 		userRepository.save(user);
+
+		log.info("createUser() created new user with id: " + user.getId());
+
 		return ResponseEntity.ok(user);
 	}
 	
