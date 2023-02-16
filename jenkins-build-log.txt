@@ -1,0 +1,179 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww19200\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf0 \expnd0\expndtw0\kerning0
+Started by user coolshubh4\
+Running as SYSTEM\
+Building in workspace /Users/coolshubh4/.jenkins/workspace/e-commerce-deployment\
+The recommended git tool is: NONE\
+using credential 3fca2b46-8d3a-4745-9c79-17cdc550e11a\
+ > git rev-parse --resolve-git-dir /Users/coolshubh4/.jenkins/workspace/e-commerce-deployment/.git # timeout=10\
+Fetching changes from the remote Git repository\
+ > git config remote.origin.url https://github.com/stripathi99/JWD4-eCommerceApplication.git # timeout=10\
+Fetching upstream changes from https://github.com/stripathi99/JWD4-eCommerceApplication.git\
+ > git --version # timeout=10\
+ > git --version # 'git version 2.32.0 (Apple Git-132)'\
+using GIT_ASKPASS to set credentials \
+ > git fetch --tags --force --progress -- https://github.com/stripathi99/JWD4-eCommerceApplication.git +refs/heads/*:refs/remotes/origin/* # timeout=10\
+ > git rev-parse refs/remotes/origin/main^\{commit\} # timeout=10\
+Checking out Revision dc62baeb2e6a9d67a418bce7f7d6f121afe256ed (refs/remotes/origin/main)\
+ > git config core.sparsecheckout # timeout=10\
+ > git checkout -f dc62baeb2e6a9d67a418bce7f7d6f121afe256ed # timeout=10\
+Commit message: "Added splunk screen-shots."\
+ > git rev-list --no-walk dc62baeb2e6a9d67a418bce7f7d6f121afe256ed # timeout=10\
+[e-commerce-deployment] $ mvn -f starter_code/pom.xml package\
+[INFO] Scanning for projects...\
+[INFO] \
+[INFO] ----------------------< com.example:auth-course >-----------------------\
+[INFO] Building auth-course 0.0.1-SNAPSHOT\
+[INFO]   from pom.xml\
+[INFO] --------------------------------[ war ]---------------------------------\
+[INFO] \
+[INFO] --- resources:3.1.0:resources (default-resources) @ auth-course ---\
+[INFO] Using 'UTF-8' encoding to copy filtered resources.\
+[INFO] Copying 1 resource\
+[INFO] Copying 2 resources\
+[INFO] \
+[INFO] --- compiler:3.8.1:compile (default-compile) @ auth-course ---\
+[INFO] Changes detected - recompiling the module!\
+[INFO] Compiling 20 source files to /Users/coolshubh4/.jenkins/workspace/e-commerce-deployment/starter_code/target/classes\
+[INFO] \
+[INFO] --- resources:3.1.0:testResources (default-testResources) @ auth-course ---\
+[INFO] Using 'UTF-8' encoding to copy filtered resources.\
+[INFO] skip non existing resourceDirectory /Users/coolshubh4/.jenkins/workspace/e-commerce-deployment/starter_code/src/test/resources\
+[INFO] \
+[INFO] --- compiler:3.8.1:testCompile (default-testCompile) @ auth-course ---\
+[INFO] Changes detected - recompiling the module!\
+[INFO] Compiling 6 source files to /Users/coolshubh4/.jenkins/workspace/e-commerce-deployment/starter_code/target/test-classes\
+[INFO] \
+[INFO] --- surefire:2.22.2:test (default-test) @ auth-course ---\
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.22.2/surefire-junit4-2.22.2.pom\
+Progress (1): 1.4/3.1 kB\
+Progress (1): 2.7/3.1 kB\
+Progress (1): 3.1 kB    \
+                    \
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.22.2/surefire-junit4-2.22.2.pom (3.1 kB at 3.5 kB/s)\
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.22.2/surefire-providers-2.22.2.pom\
+Progress (1): 1.4/2.5 kB\
+Progress (1): 2.5 kB    \
+                    \
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.22.2/surefire-providers-2.22.2.pom (2.5 kB at 89 kB/s)\
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.22.2/surefire-junit4-2.22.2.jar\
+Progress (1): 1.4/85 kB\
+Progress (1): 2.7/85 kB\
+Progress (1): 4.1/85 kB\
+Progress (1): 5.5/85 kB\
+Progress (1): 6.9/85 kB\
+Progress (1): 8.2/85 kB\
+Progress (1): 9.6/85 kB\
+Progress (1): 11/85 kB \
+Progress (1): 12/85 kB\
+Progress (1): 14/85 kB\
+Progress (1): 15/85 kB\
+Progress (1): 16/85 kB\
+Progress (1): 32/85 kB\
+Progress (1): 49/85 kB\
+Progress (1): 65/85 kB\
+Progress (1): 81/85 kB\
+Progress (1): 85 kB   \
+                   \
+Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-junit4/2.22.2/surefire-junit4-2.22.2.jar (85 kB at 1.4 MB/s)\
+[INFO] \
+[INFO] -------------------------------------------------------\
+[INFO]  T E S T S\
+[INFO] -------------------------------------------------------\
+[INFO] Running com.example.demo.SareetaApplicationTests\
+02:10:26,029 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]\
+02:10:26,030 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]\
+02:10:26,031 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/Users/coolshubh4/.jenkins/workspace/e-commerce-deployment/starter_code/target/classes/logback.xml]\
+02:10:26,158 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set\
+02:10:26,159 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [com.splunk.logging.TcpAppender]\
+02:10:26,168 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [socket]\
+02:10:26,476 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [com.example.demo.controllers] to INFO\
+02:10:26,476 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [com.example.demo.controllers] to false\
+02:10:26,476 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [socket] to Logger[com.example.demo.controllers]\
+02:10:26,477 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]\
+02:10:26,480 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]\
+02:10:26,503 |-INFO in com.splunk.logging.TcpAppender[socket] - 127.0.0.1:15000 connection established\
+02:10:26,517 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - This appender no longer admits a layout as a sub-component, set an encoder instead.\
+02:10:26,517 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - To ensure compatibility, wrapping your layout in LayoutWrappingEncoder.\
+02:10:26,517 |-WARN in ch.qos.logback.core.ConsoleAppender[STDOUT] - See also http://logback.qos.ch/codes.html#layoutInsteadOfEncoder for details\
+02:10:26,518 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to INFO\
+02:10:26,518 |-INFO in ch.qos.logback.core.joran.action.AppenderRefAction - Attaching appender named [STDOUT] to Logger[ROOT]\
+02:10:26,518 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.\
+02:10:26,519 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@49dc7102 - Registering current configuration as safe fallback point\
+\
+2023-02-17 02:10:26 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.SareetaApplicationTests], using SpringBootContextLoader\
+2023-02-17 02:10:26 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.example.demo.SareetaApplicationTests]: no resource found for suffixes \{-context.xml, Context.groovy\}.\
+2023-02-17 02:10:26 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.demo.SareetaApplicationTests]: SareetaApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.\
+2023-02-17 02:10:26 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.demo.SareetaApplication for test class com.example.demo.SareetaApplicationTests\
+2023-02-17 02:10:26 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]\
+2023-02-17 02:10:26 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@46944ca9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@22bac7bc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@63798ca7, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4612b856, org.springframework.test.context.support.DirtiesContextTestExecutionListener@22875539, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5674e1f2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@79c7532f, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@2a448449, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@32f232a5, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@43f82e78, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@e54303, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@e8df99a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2dc995f4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2f40e5db]\
+\
+  .   ____          _            __ _ _\
+ /\\\\ / ___'_ __ _ _(_)_ __  __ _ \\ \\ \\ \\\
+( ( )\\___ | '_ | '_| | '_ \\/ _` | \\ \\ \\ \\\
+ \\\\/  ___)| |_)| | | | | || (_| |  ) ) ) )\
+  '  |____| .__|_| |_|_| |_\\__, | / / / /\
+ =========|_|==============|___/=/_/_/_/\
+ :: Spring Boot ::        (v2.1.5.RELEASE)\
+\
+2023-02-17 02:10:27 [main] INFO  c.e.demo.SareetaApplicationTests - Starting SareetaApplicationTests on 192.168.2.101 with PID 33055 (started by coolshubh4 in /Users/coolshubh4/.jenkins/workspace/e-commerce-deployment/starter_code)\
+2023-02-17 02:10:27 [main] INFO  c.e.demo.SareetaApplicationTests - No active profile set, falling back to default profiles: default\
+2023-02-17 02:10:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.\
+2023-02-17 02:10:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 99ms. Found 4 repository interfaces.\
+2023-02-17 02:10:29 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b0abb9d8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)\
+2023-02-17 02:10:29 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...\
+2023-02-17 02:10:29 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.\
+2023-02-17 02:10:29 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [\
+	name: default\
+	...]\
+2023-02-17 02:10:30 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core \{5.3.10.Final\}\
+2023-02-17 02:10:30 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found\
+2023-02-17 02:10:30 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations \{5.0.4.Final\}\
+2023-02-17 02:10:30 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect\
+2023-02-17 02:10:31 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'\
+2023-02-17 02:10:32 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning\
+2023-02-17 02:10:32 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5008559a, org.springframework.security.web.context.SecurityContextPersistenceFilter@3d667b59, org.springframework.security.web.header.HeaderWriterFilter@35cf91df, org.springframework.web.filter.CorsFilter@4c0bfe9e, org.springframework.security.web.authentication.logout.LogoutFilter@5df54296, com.example.demo.security.JWTAuthenticationFilter@490fbeaa, com.example.demo.security.JWTAuthenticationVerficationFilter@35dc849b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2568611c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1aaf73b7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@276aa33f, org.springframework.security.web.session.SessionManagementFilter@7f02b2d4, org.springframework.security.web.access.ExceptionTranslationFilter@36cdcae0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@520ec7a7]\
+2023-02-17 02:10:33 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'\
+2023-02-17 02:10:33 [main] INFO  c.e.demo.SareetaApplicationTests - Started SareetaApplicationTests in 6.568 seconds (JVM running for 8.115)\
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.831 s - in com.example.demo.SareetaApplicationTests\
+[INFO] Running com.example.demo.controller.UserControllerTest\
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.332 s - in com.example.demo.controller.UserControllerTest\
+[INFO] Running com.example.demo.controller.ItemControllerTest\
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 s - in com.example.demo.controller.ItemControllerTest\
+[INFO] Running com.example.demo.controller.CartControllerTest\
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.example.demo.controller.CartControllerTest\
+[INFO] Running com.example.demo.controller.OrderControllerTest\
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.054 s - in com.example.demo.controller.OrderControllerTest\
+2023-02-17 02:10:34 [Thread-2] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'\
+2023-02-17 02:10:34 [Thread-2] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'\
+2023-02-17 02:10:34 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...\
+2023-02-17 02:10:34 [Thread-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.\
+[INFO] \
+[INFO] Results:\
+[INFO] \
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0\
+[INFO] \
+[INFO] \
+[INFO] --- war:3.2.2:war (default-war) @ auth-course ---\
+[INFO] Packaging webapp\
+[INFO] Assembling webapp [auth-course] in [/Users/coolshubh4/.jenkins/workspace/e-commerce-deployment/starter_code/target/auth-course-0.0.1-SNAPSHOT]\
+[INFO] Processing war project\
+[INFO] Webapp assembled in [427 msecs]\
+[INFO] Building war: /Users/coolshubh4/.jenkins/workspace/e-commerce-deployment/starter_code/target/auth-course-0.0.1-SNAPSHOT.war\
+[INFO] \
+[INFO] --- spring-boot:2.1.5.RELEASE:repackage (repackage) @ auth-course ---\
+[INFO] Replacing main artifact with repackaged archive\
+[INFO] ------------------------------------------------------------------------\
+[INFO] BUILD SUCCESS\
+[INFO] ------------------------------------------------------------------------\
+[INFO] Total time:  22.208 s\
+[INFO] Finished at: 2023-02-17T02:10:38+05:30\
+[INFO] ------------------------------------------------------------------------\
+Finished: SUCCESS}
