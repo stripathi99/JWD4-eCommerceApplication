@@ -30,10 +30,10 @@ public class UserControllerTest {
   private UserController userController;
 
   @Mock
-  private UserRepository userRepository = mock(UserRepository.class);
+  private UserRepository userRepository;
 
   @Mock
-  private CartRepository cartRepository = mock(CartRepository.class);
+  private CartRepository cartRepository;
 
   private static final Long TEST_ID = 0L;
   private static final String TEST_USERNAME = "username";
@@ -65,43 +65,32 @@ public class UserControllerTest {
 
   @Test
   public void find_by_id_found() {
-    User mockUser = getMockUser();
-    when(userRepository.findById(TEST_ID)).thenReturn(Optional.of(mockUser));
-
+    when(userRepository.findById(TEST_ID)).thenReturn(Optional.of(getMockUser()));
     ResponseEntity<User> responseEntity = userController.findById(TEST_ID);
-    User user = responseEntity.getBody();
-
     assertNotNull(responseEntity);
     assertEquals(OK, responseEntity.getStatusCode());
-    assertEquals(TEST_ID.longValue(), user.getId());
+    assertEquals(TEST_ID.longValue(), responseEntity.getBody().getId());
   }
 
   @Test
   public void find_by_id_not_found() {
     ResponseEntity<User> responseEntity = userController.findById(TEST_ID);
-
     assertNotNull(responseEntity);
     assertEquals(NOT_FOUND, responseEntity.getStatusCode());
   }
 
   @Test
   public void find_by_username_found() {
-    User mockUser = getMockUser();
-
-    when(userRepository.findByUsername(TEST_USERNAME)).thenReturn(mockUser);
-
+    when(userRepository.findByUsername(TEST_USERNAME)).thenReturn(getMockUser());
     ResponseEntity<User> responseEntity = userController.findByUserName(TEST_USERNAME);
-    User user = responseEntity.getBody();
-
     assertNotNull(responseEntity);
     assertEquals(OK, responseEntity.getStatusCode());
-    assertEquals(TEST_USERNAME, user.getUsername());
+    assertEquals(TEST_USERNAME, responseEntity.getBody().getUsername());
   }
 
   @Test
   public void find_by_username_not_found() {
     ResponseEntity<User> responseEntity = userController.findByUserName(TEST_USERNAME);
-
     assertNotNull(responseEntity);
     assertEquals(NOT_FOUND, responseEntity.getStatusCode());
   }
