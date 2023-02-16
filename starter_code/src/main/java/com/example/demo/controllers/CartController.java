@@ -59,7 +59,7 @@ public class CartController {
 	public ResponseEntity<Cart> removeFromcart(@RequestBody ModifyCartRequest request) {
 		User user = userRepository.findByUsername(request.getUsername());
 		if(user == null) {
-			log.warn("removeFromcart() | no user found with id: " + user.getId());
+			log.warn("removeFromcart() | no user found with username: " + request.getUsername());
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
 		Optional<Item> item = itemRepository.findById(request.getItemId());

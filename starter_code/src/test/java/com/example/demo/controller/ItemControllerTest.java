@@ -1,5 +1,8 @@
 package com.example.demo.controller;
 
+import static com.example.demo.util.CreateMocksUtil.TEST_ID;
+import static com.example.demo.util.CreateMocksUtil.TEST_ITEM_NAME;
+import static com.example.demo.util.CreateMocksUtil.getMockItem;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.ArgumentMatchers.anyLong;
@@ -11,7 +14,6 @@ import static org.springframework.http.HttpStatus.OK;
 import com.example.demo.controllers.ItemController;
 import com.example.demo.model.persistence.Item;
 import com.example.demo.model.persistence.repositories.ItemRepository;
-import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
@@ -30,11 +32,6 @@ public class ItemControllerTest {
 
   @Mock
   private ItemRepository itemRepository;
-
-  private static final Long TEST_ID = 0L;
-  private static final String TEST_ITEM_NAME = "Test Item Name";
-  private static final String TEST_ITEM_DESC = "Test Item Description.";
-  private static final BigDecimal TEST_ITEM_PRICE = BigDecimal.valueOf(99.99);
 
   @Before
   public void setUp() {
@@ -82,15 +79,5 @@ public class ItemControllerTest {
     ResponseEntity<List<Item>> responseEntity = itemController.getItemsByName(TEST_ITEM_NAME);
     assertNotNull(responseEntity);
     assertEquals(NOT_FOUND, responseEntity.getStatusCode());
-  }
-
-  private Item getMockItem() {
-    Item item = new Item();
-    item.setId(TEST_ID);
-    item.setName(TEST_ITEM_NAME);
-    item.setDescription(TEST_ITEM_DESC);
-    item.setPrice(TEST_ITEM_PRICE);
-
-    return item;
   }
 }

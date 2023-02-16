@@ -1,5 +1,9 @@
 package com.example.demo.controller;
 
+import static com.example.demo.util.CreateMocksUtil.TEST_ID;
+import static com.example.demo.util.CreateMocksUtil.TEST_PASSWORD;
+import static com.example.demo.util.CreateMocksUtil.TEST_USERNAME;
+import static com.example.demo.util.CreateMocksUtil.getMockUser;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.ArgumentMatchers.anyString;
@@ -34,10 +38,6 @@ public class UserControllerTest {
 
   @Mock
   private CartRepository cartRepository;
-
-  private static final Long TEST_ID = 0L;
-  private static final String TEST_USERNAME = "username";
-  private static final String TEST_PASSWORD = "password";
 
   @Before
   public void setUp() {
@@ -93,14 +93,5 @@ public class UserControllerTest {
     ResponseEntity<User> responseEntity = userController.findByUserName(TEST_USERNAME);
     assertNotNull(responseEntity);
     assertEquals(NOT_FOUND, responseEntity.getStatusCode());
-  }
-
-  private User getMockUser() {
-    User mockUser = new User();
-    mockUser.setId(TEST_ID);
-    mockUser.setUsername(TEST_USERNAME);
-    mockUser.setPassword(TEST_PASSWORD);
-
-    return mockUser;
   }
 }
