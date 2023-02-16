@@ -1,7 +1,7 @@
 <configuration>
   <appender name="socket" class="com.splunk.logging.TcpAppender">
     <RemoteHost>127.0.0.1</RemoteHost>
-    <Port>15000</Port>
+    <Port>8000</Port>
     <!-- Event JSON Format ====> Credit: https://mathieularose.com/logback-json/-->
     <layout class="ch.qos.logback.contrib.json.classic.JsonLayout">
       <jsonFormatter class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">
